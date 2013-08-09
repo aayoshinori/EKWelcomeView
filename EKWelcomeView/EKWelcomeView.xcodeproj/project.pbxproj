@@ -12,12 +12,18 @@
 		DE8F8E1617B58FC600AFC543 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE8F8E1517B58FC600AFC543 /* CoreGraphics.framework */; };
 		DE8F8E1C17B58FC600AFC543 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE8F8E1A17B58FC600AFC543 /* InfoPlist.strings */; };
 		DE8F8E1E17B58FC600AFC543 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8F8E1D17B58FC600AFC543 /* main.m */; };
-		DE8F8E2217B58FC600AFC543 /* EKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8F8E2117B58FC600AFC543 /* EKAppDelegate.m */; };
 		DE8F8E2417B58FC600AFC543 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = DE8F8E2317B58FC600AFC543 /* Default.png */; };
 		DE8F8E2617B58FC600AFC543 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE8F8E2517B58FC600AFC543 /* Default@2x.png */; };
 		DE8F8E2817B58FC600AFC543 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = DE8F8E2717B58FC600AFC543 /* Default-568h@2x.png */; };
 		DE8F8E2B17B58FC600AFC543 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE8F8E2917B58FC600AFC543 /* MainStoryboard.storyboard */; };
-		DE8F8E2E17B58FC600AFC543 /* EKViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8F8E2D17B58FC600AFC543 /* EKViewController.m */; };
+		DE8F8E3B17B5909900AFC543 /* EKWelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8F8E3717B5909900AFC543 /* EKWelcomeViewController.m */; };
+		DE8F8E3C17B5909900AFC543 /* EKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8F8E3917B5909900AFC543 /* EKAppDelegate.m */; };
+		DE8F8E4717B590FD00AFC543 /* EKWelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8F8E3D17B590FD00AFC543 /* EKWelcomeView.m */; };
+		DE8F8E4817B590FD00AFC543 /* EKFourthHintView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8F8E3F17B590FD00AFC543 /* EKFourthHintView.m */; };
+		DE8F8E4917B590FD00AFC543 /* EKThirdHintView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8F8E4117B590FD00AFC543 /* EKThirdHintView.m */; };
+		DE8F8E4A17B590FD00AFC543 /* EKFirstHintView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8F8E4317B590FD00AFC543 /* EKFirstHintView.m */; };
+		DE8F8E4B17B590FD00AFC543 /* EKSecondHintView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8F8E4417B590FD00AFC543 /* EKSecondHintView.m */; };
+		DE8F8E4E17B5964000AFC543 /* EKDestinationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8F8E4D17B5964000AFC543 /* EKDestinationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,14 +35,26 @@
 		DE8F8E1B17B58FC600AFC543 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DE8F8E1D17B58FC600AFC543 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DE8F8E1F17B58FC600AFC543 /* EKWelcomeView-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EKWelcomeView-Prefix.pch"; sourceTree = "<group>"; };
-		DE8F8E2017B58FC600AFC543 /* EKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKAppDelegate.h; sourceTree = "<group>"; };
-		DE8F8E2117B58FC600AFC543 /* EKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKAppDelegate.m; sourceTree = "<group>"; };
 		DE8F8E2317B58FC600AFC543 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		DE8F8E2517B58FC600AFC543 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		DE8F8E2717B58FC600AFC543 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		DE8F8E2A17B58FC600AFC543 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		DE8F8E2C17B58FC600AFC543 /* EKViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKViewController.h; sourceTree = "<group>"; };
-		DE8F8E2D17B58FC600AFC543 /* EKViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKViewController.m; sourceTree = "<group>"; };
+		DE8F8E3617B5909900AFC543 /* EKWelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKWelcomeViewController.h; sourceTree = "<group>"; };
+		DE8F8E3717B5909900AFC543 /* EKWelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKWelcomeViewController.m; sourceTree = "<group>"; };
+		DE8F8E3817B5909900AFC543 /* EKAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKAppDelegate.h; sourceTree = "<group>"; };
+		DE8F8E3917B5909900AFC543 /* EKAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKAppDelegate.m; sourceTree = "<group>"; };
+		DE8F8E3D17B590FD00AFC543 /* EKWelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKWelcomeView.m; sourceTree = "<group>"; };
+		DE8F8E3E17B590FD00AFC543 /* EKWelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKWelcomeView.h; sourceTree = "<group>"; };
+		DE8F8E3F17B590FD00AFC543 /* EKFourthHintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKFourthHintView.m; sourceTree = "<group>"; };
+		DE8F8E4017B590FD00AFC543 /* EKFourthHintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKFourthHintView.h; sourceTree = "<group>"; };
+		DE8F8E4117B590FD00AFC543 /* EKThirdHintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKThirdHintView.m; sourceTree = "<group>"; };
+		DE8F8E4217B590FD00AFC543 /* EKThirdHintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKThirdHintView.h; sourceTree = "<group>"; };
+		DE8F8E4317B590FD00AFC543 /* EKFirstHintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKFirstHintView.m; sourceTree = "<group>"; };
+		DE8F8E4417B590FD00AFC543 /* EKSecondHintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKSecondHintView.m; sourceTree = "<group>"; };
+		DE8F8E4517B590FD00AFC543 /* EKSecondHintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKSecondHintView.h; sourceTree = "<group>"; };
+		DE8F8E4617B590FD00AFC543 /* EKFirstHintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKFirstHintView.h; sourceTree = "<group>"; };
+		DE8F8E4C17B5964000AFC543 /* EKDestinationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKDestinationViewController.h; sourceTree = "<group>"; };
+		DE8F8E4D17B5964000AFC543 /* EKDestinationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKDestinationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,11 +101,8 @@
 		DE8F8E1717B58FC600AFC543 /* EKWelcomeView */ = {
 			isa = PBXGroup;
 			children = (
-				DE8F8E2017B58FC600AFC543 /* EKAppDelegate.h */,
-				DE8F8E2117B58FC600AFC543 /* EKAppDelegate.m */,
+				DE8F8E3417B5909900AFC543 /* Classes */,
 				DE8F8E2917B58FC600AFC543 /* MainStoryboard.storyboard */,
-				DE8F8E2C17B58FC600AFC543 /* EKViewController.h */,
-				DE8F8E2D17B58FC600AFC543 /* EKViewController.m */,
 				DE8F8E1817B58FC600AFC543 /* Supporting Files */,
 			);
 			path = EKWelcomeView;
@@ -105,6 +120,45 @@
 				DE8F8E2717B58FC600AFC543 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DE8F8E3417B5909900AFC543 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				DE8F8E3A17B5909900AFC543 /* Views */,
+				DE8F8E3517B5909900AFC543 /* Controllers */,
+				DE8F8E3817B5909900AFC543 /* EKAppDelegate.h */,
+				DE8F8E3917B5909900AFC543 /* EKAppDelegate.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		DE8F8E3517B5909900AFC543 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				DE8F8E3617B5909900AFC543 /* EKWelcomeViewController.h */,
+				DE8F8E3717B5909900AFC543 /* EKWelcomeViewController.m */,
+				DE8F8E4C17B5964000AFC543 /* EKDestinationViewController.h */,
+				DE8F8E4D17B5964000AFC543 /* EKDestinationViewController.m */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		DE8F8E3A17B5909900AFC543 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE8F8E3E17B590FD00AFC543 /* EKWelcomeView.h */,
+				DE8F8E3D17B590FD00AFC543 /* EKWelcomeView.m */,
+				DE8F8E4617B590FD00AFC543 /* EKFirstHintView.h */,
+				DE8F8E4317B590FD00AFC543 /* EKFirstHintView.m */,
+				DE8F8E4017B590FD00AFC543 /* EKFourthHintView.h */,
+				DE8F8E3F17B590FD00AFC543 /* EKFourthHintView.m */,
+				DE8F8E4217B590FD00AFC543 /* EKThirdHintView.h */,
+				DE8F8E4117B590FD00AFC543 /* EKThirdHintView.m */,
+				DE8F8E4517B590FD00AFC543 /* EKSecondHintView.h */,
+				DE8F8E4417B590FD00AFC543 /* EKSecondHintView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,8 +229,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE8F8E1E17B58FC600AFC543 /* main.m in Sources */,
-				DE8F8E2217B58FC600AFC543 /* EKAppDelegate.m in Sources */,
-				DE8F8E2E17B58FC600AFC543 /* EKViewController.m in Sources */,
+				DE8F8E3B17B5909900AFC543 /* EKWelcomeViewController.m in Sources */,
+				DE8F8E3C17B5909900AFC543 /* EKAppDelegate.m in Sources */,
+				DE8F8E4717B590FD00AFC543 /* EKWelcomeView.m in Sources */,
+				DE8F8E4817B590FD00AFC543 /* EKFourthHintView.m in Sources */,
+				DE8F8E4917B590FD00AFC543 /* EKThirdHintView.m in Sources */,
+				DE8F8E4A17B590FD00AFC543 /* EKFirstHintView.m in Sources */,
+				DE8F8E4B17B590FD00AFC543 /* EKSecondHintView.m in Sources */,
+				DE8F8E4E17B5964000AFC543 /* EKDestinationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
