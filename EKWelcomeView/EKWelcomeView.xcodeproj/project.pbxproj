@@ -24,6 +24,7 @@
 		DE8F8E4A17B590FD00AFC543 /* EKFirstHintView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8F8E4317B590FD00AFC543 /* EKFirstHintView.m */; };
 		DE8F8E4B17B590FD00AFC543 /* EKSecondHintView.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8F8E4417B590FD00AFC543 /* EKSecondHintView.m */; };
 		DE8F8E4E17B5964000AFC543 /* EKDestinationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DE8F8E4D17B5964000AFC543 /* EKDestinationViewController.m */; };
+		DEB226E717B6A5A600A82B74 /* file.png in Resources */ = {isa = PBXBuildFile; fileRef = DEB226E617B6A5A600A82B74 /* file.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		DE8F8E4617B590FD00AFC543 /* EKFirstHintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKFirstHintView.h; sourceTree = "<group>"; };
 		DE8F8E4C17B5964000AFC543 /* EKDestinationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKDestinationViewController.h; sourceTree = "<group>"; };
 		DE8F8E4D17B5964000AFC543 /* EKDestinationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKDestinationViewController.m; sourceTree = "<group>"; };
+		DEB226E617B6A5A600A82B74 /* file.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = file.png; path = ../../../../Desktop/file.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 		DE8F8E1817B58FC600AFC543 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DEB226E617B6A5A600A82B74 /* file.png */,
 				DE8F8E1917B58FC600AFC543 /* EKWelcomeView-Info.plist */,
 				DE8F8E1A17B58FC600AFC543 /* InfoPlist.strings */,
 				DE8F8E1D17B58FC600AFC543 /* main.m */,
@@ -218,6 +221,7 @@
 				DE8F8E2617B58FC600AFC543 /* Default@2x.png in Resources */,
 				DE8F8E2817B58FC600AFC543 /* Default-568h@2x.png in Resources */,
 				DE8F8E2B17B58FC600AFC543 /* MainStoryboard.storyboard in Resources */,
+				DEB226E717B6A5A600A82B74 /* file.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
