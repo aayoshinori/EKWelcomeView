@@ -2,7 +2,7 @@
 //  EKViewController.m
 //  EKWelcomeView
 //
-//  Created by Каркан Евгений on 09.08.13.
+//  Created by EvgenyKarkan on 09.08.13.
 //  Copyright (c) 2013 EvgenyKarkan. All rights reserved.
 //
 
@@ -23,35 +23,33 @@ static NSString * const kEKSegueIdentifier = @"nextControllerSegue";
 
 - (void)loadView
 {
-    EKWelcomeView *view = [EKWelcomeView new];
-    self.view = view;
-    self.welcomeView = view;
+	EKWelcomeView *view = [[EKWelcomeView alloc] init];
+	self.view = view;
+	self.welcomeView = view;
 }
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+	[super viewDidLoad];
 	self.welcomeView.delegate = self;
-
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+	[super didReceiveMemoryWarning];
 }
 
-- (void)dismissWelcomeScreenWithDelegate
+- (void)dismissWelcomeScreen
 {
-    [self performSegueWithIdentifier:kEKSegueIdentifier sender:self];
+	[self performSegueWithIdentifier:kEKSegueIdentifier sender:self];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:kEKSegueIdentifier]) {
-        self.myDestinationViewController = (EKDestinationViewController *)segue.destinationViewController;
-        self.myDestinationViewController = [segue destinationViewController];
-    }
+	if ([segue.identifier isEqualToString:kEKSegueIdentifier]) {
+		self.myDestinationViewController = (EKDestinationViewController *)segue.destinationViewController;
+		self.myDestinationViewController = [segue destinationViewController];
+	}
 }
 
 @end

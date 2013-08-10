@@ -6,7 +6,6 @@
 //  Copyright (c) 2013 EvgenyKarkan. All rights reserved.
 //
 
-
 #import "EKWelcomeView.h"
 #import "EKFirstHintView.h"
 #import "EKSecondHintView.h"
@@ -17,14 +16,15 @@
 
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UIPageControl *pageControl;
+@property (nonatomic, strong) UIButton *button;
 @property (nonatomic, assign) BOOL pageControlBeingUsed;
 @property (nonatomic, strong) EKFirstHintView *firstView;
 @property (nonatomic, strong) EKSecondHintView *secondView;
 @property (nonatomic, strong) EKThirdHintView *thirdView;
 @property (nonatomic, strong) EKFourthHintView *fourthView;
-@property (nonatomic, strong) UIButton *button;
 
 @end
+
 
 @implementation EKWelcomeView
 
@@ -33,88 +33,73 @@
 	self = [super initWithFrame:frame];
 	
 	if (self) {
-		self.backgroundColor = [UIColor magentaColor];
-		[self initOwnProperties];
-		[self addAllSubViews];
+		self.backgroundColor = [[UIColor magentaColor] colorWithAlphaComponent:0.6f];
+		[self createSubViews];
 	}
 	
 	return self;
 }
 
-- (void)initOwnProperties
-{
-	self.scrollView  = [[UIScrollView alloc] initWithFrame:CGRectZero];
-	self.pageControl = [[UIPageControl alloc] initWithFrame:CGRectZero];
-	self.firstView   = [[EKFirstHintView alloc] initWithFrame:CGRectZero];
-	self.secondView  = [[EKSecondHintView alloc] initWithFrame:CGRectZero];
-	self.thirdView   = [[EKThirdHintView alloc] initWithFrame:CGRectZero];
-	self.fourthView  = [[EKFourthHintView alloc] initWithFrame:CGRectZero];
-	self.button      = [[UIButton alloc] initWithFrame:CGRectZero];
-}
+#pragma mark - Init subviews stuff
 
-- (void)addAllSubViews
+- (void)createSubViews
 {
-	[self addSubview:self.scrollView];
-	[self addSubview:self.pageControl];
-	[self.scrollView addSubview:self.firstView];
-	[self.scrollView addSubview:self.secondView];
-	[self.scrollView addSubview:self.thirdView];
-	[self.scrollView addSubview:self.fourthView];
-	[self addSubview:self.button];
-}
-
-#pragma mark - Subviews stuff
-
-- (void)provideScrollView
-{
-	self.scrollView.frame = CGRectMake(0.0f, 40.0f, self.frame.size.width, self.frame.size.height - 90.0f);
-	self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * 4, self.scrollView.frame.size.height);
-	self.scrollView.backgroundColor = [UIColor yellowColor];
+	self.scrollView  = [[UIScrollView alloc] init];
+	self.scrollView.backgroundColor = [[UIColor yellowColor] colorWithAlphaComponent:0.6f];
 	self.scrollView.delegate = self;
 	self.scrollView.showsHorizontalScrollIndicator = NO;
 	self.scrollView.pagingEnabled = YES;
-}
-
-- (void)providePageControl
-{
-	self.pageControl.frame = CGRectMake(110.0f, self.frame.size.height - 45.0f, 100.0f, 40.0f);
-	self.pageControl.numberOfPages = 4;
+	[self addSubview:self.scrollView];
+	
+	self.firstView   = [[EKFirstHintView alloc] init];
+	[self.scrollView addSubview:self.firstView];
+	
+	self.secondView  = [[EKSecondHintView alloc] init];
+	[self.scrollView addSubview:self.secondView];
+	
+	self.thirdView   = [[EKThirdHintView alloc] init];
+	[self.scrollView addSubview:self.thirdView];
+	
+	self.fourthView  = [[EKFourthHintView alloc] init];
+	[self.scrollView addSubview:self.fourthView];
+	
+	self.pageControl = [[UIPageControl alloc] init];
+	self.pageControl.numberOfPages = [[self.scrollView subviews] count];
 	self.pageControl.currentPage = 0;
-	self.pageControl.backgroundColor = [UIColor orangeColor];
 	[self.pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventAllTouchEvents];
-}
-
-- (void)provideHintViews
-{
-	self.firstView.frame = CGRectMake(40.0f, 40.0f, 240.0f, self.frame.size.height - 170.0f);
-	self.secondView.frame = CGRectMake(360.0f, 40.0f, 240.0f, self.frame.size.height - 170.0f);
-	self.thirdView.frame = CGRectMake(680.0f, 40.0f, 240.0f, self.frame.size.height - 170.0f);
-	self.fourthView.frame = CGRectMake(1000.0f, 40.0f, 240.0f, self.frame.size.height - 170.0f);
-}
-
-- (void)provideButton
-{
-	self.button.frame = CGRectMake(10, 10, 50, 30);
+	[self addSubview:self.pageControl];
+	
+	self.button = [[UIButton alloc] init];
 	[self.button setTitle:@"Skip" forState:UIControlStateNormal];
 	[self.button addTarget:self action:@selector(goNext) forControlEvents:UIControlEventAllTouchEvents];
+	[self addSubview:self.button];
 }
+
+#pragma mark - Layout subviews stuff
 
 - (void)layoutSubviews
 {
 	[super layoutSubviews];
-	[self provideScrollView];
-	[self providePageControl];
-	[self provideHintViews];
-	[self provideButton];
+	
+	self.scrollView.frame = CGRectMake(0.0f, self.frame.origin.y + 20.0f, self.frame.size.width, self.frame.size.height - 90.0f);
+	self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.size.width * [[self.scrollView subviews] count], self.scrollView.frame.size.height);
+	self.pageControl.frame = CGRectMake(self.frame.origin.x, self.frame.size.height - 45.0f, self.frame.size.width, 40.0f);
+	
+	for (NSUInteger i = 0; i < [[self.scrollView subviews] count]; i++) {
+		[[[self.scrollView subviews] objectAtIndex:i] setFrame:CGRectMake(40.0f + (i * self.frame.size.width), 40.0f,
+		                                                                  self.frame.size.width - 80.0f, self.frame.size.height - 170.0f)];
+	}
+	
+	self.button.frame = CGRectMake(self.frame.size.width - 50.0f, 10.0f, 50.0f, 30.0f);
 }
 
-#pragma mark - ScrollView delegate
+#pragma mark - ScrollView's delegate stuff
 
 - (void)scrollViewDidScroll:(UIScrollView *)sender
 {
 	if (!self.pageControlBeingUsed) {
 		CGFloat pageWidth = self.scrollView.frame.size.width;
-		NSInteger page = floor((self.scrollView.contentOffset.x - pageWidth / 2) / pageWidth) + 1;
+		NSInteger page = floor((self.scrollView.contentOffset.x - pageWidth / 2.0f) / pageWidth) + 1;
 		self.pageControl.currentPage = page;
 	}
 }
@@ -139,9 +124,13 @@
 	}
 }
 
+#pragma mark - Delegate stuff
+
 - (void)goNext
 {
-	[self.delegate dismissWelcomeScreenWithDelegate];
+	if (self.delegate) {
+		[self.delegate dismissWelcomeScreen];
+	}
 }
 
 @end

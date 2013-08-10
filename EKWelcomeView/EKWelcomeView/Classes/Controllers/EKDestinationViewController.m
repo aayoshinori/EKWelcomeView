@@ -2,7 +2,7 @@
 //  EKDestinationViewController.m
 //  EKWelcomeView
 //
-//  Created by Каркан Евгений on 10.08.13.
+//  Created by EvgenyKarkan on 09.08.13.
 //  Copyright (c) 2013 EvgenyKarkan. All rights reserved.
 //
 
@@ -11,6 +11,7 @@
 @interface EKDestinationViewController ()
 
 @end
+
 
 @implementation EKDestinationViewController
 

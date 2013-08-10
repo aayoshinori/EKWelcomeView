@@ -10,7 +10,7 @@
 
 @protocol EKDismissWelcomeScreenProtocol <NSObject>
 
-- (void)dismissWelcomeScreenWithDelegate;
+- (void)dismissWelcomeScreen;
 
 @end
 
