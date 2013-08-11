@@ -44,6 +44,14 @@
             <point key="canvasLocation" x="554" y="153"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="EKDestinationViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EKDestinationViewController.h"/>
+        </class>
+        <class className="EKWelcomeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/EKWelcomeViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

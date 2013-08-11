@@ -71,7 +71,7 @@
 	
 	self.button = [[UIButton alloc] init];
 	[self.button setTitle:@"Skip" forState:UIControlStateNormal];
-	[self.button addTarget:self action:@selector(goNext) forControlEvents:UIControlEventAllTouchEvents];
+	[self.button addTarget:self action:@selector(goNext:) forControlEvents:UIControlEventAllTouchEvents];
 	[self addSubview:self.button];
 }
 
@@ -126,9 +126,9 @@
 
 #pragma mark - Delegate stuff
 
-- (void)goNext
+- (void)goNext:(UILongPressGestureRecognizer *)sender
 {
-	if (self.delegate) {
+	if ((self.delegate) && (sender.state == UIGestureRecognizerStateBegan)) {
 		[self.delegate dismissWelcomeScreen];
 	}
 }
