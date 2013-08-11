@@ -19,6 +19,7 @@ static NSString * const kEKSegueIdentifier = @"nextControllerSegue";
 
 @end
 
+
 @implementation EKWelcomeViewController
 
 - (void)loadView
@@ -38,6 +39,8 @@ static NSString * const kEKSegueIdentifier = @"nextControllerSegue";
 {
 	[super didReceiveMemoryWarning];
 }
+
+#pragma mark - EKDismissWelcomeScreenProtocol's & segue's stuff
 
 - (void)dismissWelcomeScreen
 {
