@@ -66,12 +66,12 @@
 	self.pageControl = [[UIPageControl alloc] init];
 	self.pageControl.numberOfPages = [[self.scrollView subviews] count];
 	self.pageControl.currentPage = 0;
-	[self.pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventAllTouchEvents];
+	[self.pageControl addTarget:self action:@selector(changePage:) forControlEvents:UIControlEventTouchUpInside];
 	[self addSubview:self.pageControl];
 	
 	self.button = [[UIButton alloc] init];
 	[self.button setTitle:@"Skip" forState:UIControlStateNormal];
-	[self.button addTarget:self action:@selector(goNext:) forControlEvents:UIControlEventAllTouchEvents];
+	[self.button addTarget:self action:@selector(goNext) forControlEvents:UIControlEventTouchUpInside];
 	[self addSubview:self.button];
 }
 
@@ -126,9 +126,9 @@
 
 #pragma mark - Delegate stuff
 
-- (void)goNext:(UILongPressGestureRecognizer *)sender
+- (void)goNext
 {
-	if ((self.delegate) && (sender.state == UIGestureRecognizerStateBegan)) {
+	if (self.delegate) {
 		[self.delegate dismissWelcomeScreen];
 	}
 }
